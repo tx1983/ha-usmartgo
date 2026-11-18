@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "USmart Go",
+        "description": "Sign in with the account you use in the USmart Go app.",
+        "data": {
+          "identifier": "Phone or email",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid identifier or password",
+      "cannot_connect": "Failed to connect to the USmart Go cloud"
+    },
+    "abort": {
+      "already_configured": "Account is already configured",
+      "reauth_successful": "Re-authentication was successful"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Poll interval (minutes)",
+          "unlock_code": "Unlock PIN (4-8 digits, required for remote unlock)",
+          "record_enabled": "Record video when someone lingers at the door (HUMAN_LINGERING) or rings the bell (REMOTE_UNLOCK)",
+          "record_seconds": "Recording length (seconds)",
+          "record_cooldown": "Cooldown between recordings (seconds)",
+          "record_keep_days": "Keep recordings (days, 0 = forever)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": {
+        "name": "Battery"
+      },
+      "rssi": {
+        "name": "Wi-Fi signal"
+      },
+      "last_event": {
+        "name": "Last event"
+      },
+      "last_user": {
+        "name": "Last unlock user"
+      }
+    },
+    "binary_sensor": {
+      "online": {
+        "name": "Online"
+      },
+      "door": {
+        "name": "Door"
+      }
+    },
+    "camera": {
+      "camera": {
+        "name": "Camera"
+      }
+    }
+  }
+}

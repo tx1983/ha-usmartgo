@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "USmart Go",
+        "description": "Войдите в аккаунт, который используется в приложении USmart Go.",
+        "data": {
+          "identifier": "Телефон или email",
+          "password": "Пароль"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Повторная аутентификация",
+        "data": {
+          "password": "Пароль"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Неверный логин или пароль",
+      "cannot_connect": "Не удалось подключиться к облаку USmart Go"
+    },
+    "abort": {
+      "already_configured": "Аккаунт уже настроен",
+      "reauth_successful": "Повторная аутентификация выполнена"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Интервал опроса (минуты)",
+          "unlock_code": "PIN для открытия (4-8 цифр, нужен для удалённого открытия)",
+          "record_enabled": "Записывать видео, когда кто-то стоит у двери (HUMAN_LINGERING) или звонит в дверь (REMOTE_UNLOCK)",
+          "record_seconds": "Длительность записи (секунды)",
+          "record_cooldown": "Пауза между записями (секунды)",
+          "record_keep_days": "Хранить записи (дней, 0 — всегда)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "battery": {
+        "name": "Батарея"
+      },
+      "rssi": {
+        "name": "Сигнал Wi-Fi"
+      },
+      "last_event": {
+        "name": "Последнее событие"
+      },
+      "last_user": {
+        "name": "Кто открыл"
+      }
+    },
+    "binary_sensor": {
+      "online": {
+        "name": "В сети"
+      },
+      "door": {
+        "name": "Дверь"
+      }
+    },
+    "camera": {
+      "camera": {
+        "name": "Камера"
+      }
+    }
+  }
+}
