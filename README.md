@@ -158,8 +158,13 @@ Or send the file itself, e.g. `telegram_bot.send_video` with
 ```yaml
 homeassistant:
   media_dirs:
+    local: /media
     usmartgo: /config/www/usmartgo
 ```
+
+  Keep the `local: /media` line: setting `media_dirs` replaces the default
+  media folder, and with a single entry **My media** opens it directly
+  instead of listing it as a subfolder.
 
 ## Camera stream notes
 
