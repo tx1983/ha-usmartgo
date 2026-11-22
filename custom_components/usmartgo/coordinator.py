@@ -773,7 +773,11 @@ class UsmartCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             os.makedirs(folder, exist_ok=True)
 
         await self.hass.async_add_executor_job(_mkdir)
-        base = f"{did}_{time.strftime('%Y%m%d-%H%M%S')}"
+        # Date first so clips sort and read naturally; the device id
+        # is only appended (short tail) when there are several devices.
+        base = time.strftime("%Y-%m-%d_%H-%M-%S")
+        if len(self.data.get("devices", {})) > 1:
+            base = f"{base}_{did[-4:]}"
         ffmpeg = shutil.which("ffmpeg")
         if ffmpeg:
             fname = f"{base}.mp4"

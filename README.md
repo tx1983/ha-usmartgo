@@ -78,8 +78,8 @@ trigger.event.data:
 trigger.event.data:
   did:   device id
   name:  device name
-  path:  /config/www/usmartgo/<did>_<ts>.mp4
-  url:   /local/usmartgo/<did>_<ts>.mp4   # browser/app-playable
+  path:  /config/www/usmartgo/<YYYY-MM-DD_HH-MM-SS>.mp4
+  url:   /local/usmartgo/<YYYY-MM-DD_HH-MM-SS>.mp4   # browser/app-playable
 ```
 
 ## Automations
