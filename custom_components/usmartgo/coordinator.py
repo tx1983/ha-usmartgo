@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import asyncio
+import html
 import logging
 import os
 import shutil
@@ -708,7 +709,8 @@ class UsmartCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         )
         persistent_notification.async_create(
             self.hass,
-            f"[{os.path.basename(path)}]({url})",
+            f'<a href="{html.escape(url, quote=True)}" target="_blank">'
+            f"{html.escape(os.path.basename(path))}</a>",
             title=f"Кто-то у двери — {name}",
             notification_id=f"usmartgo_record_{did}",
         )
